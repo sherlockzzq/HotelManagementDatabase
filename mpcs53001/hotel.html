@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hotel Operation</title>
+
+</head>
+<body>
+
+<div>
+      <p><b>Be our partner</b><hr></p>
+      <form method = "get" action = "addHotel.php">
+      <p>Type in the following information to sign up for our partner.</p>
+     
+      Name: <input type="text" name = "name"><br>
+      Phone Number:<input type="text" name =  "phone" ><br>
+      Address(should not be empty): <input type="text" name =  "address"><br>
+      Zipcode: <input type="text" name =  "birthday"><br>
+      <input type = "submit" name = "Submit">  </form>
+    </div><hr>
+
+    <div>
+      <p><b>Update Room Price</b>
+      <form method = "get" action = "updatePrice.php">
+      <p>Type in the following information to update room's price .</p>
+     
+      Hotel Address(eg: 1 W Wacker Dr, Chicago, IL): <input type="text" name = "hotel" required><br>
+      Room Number(eg: 1303): <input type="text" name =  "room" required><br>
+      Operation person(optional): <input type="text" name =  "roo"><br>
+      Price change to (eg: 500):<input type="text" name = "p" required><br>
+      <input type = "submit"; name = "Submit">  
+    </form>
+    </div><hr>
+
+    <div>
+      <b><p>Terminate our partnership</p></b>
+      <form method = "get" action = "deleteHotel.php" name = "frm">
+      <p>Type in your hotel address and terminate our partnership.</p>
+     
+      Hotel Address(eg: 1W Wacker Dr, Chicago, IL): <input type="text" name = "hotel" required><br>
+      <input type = "submit" name = "Submit" >
+
+      
+    </form>
+    </div>
+</body>
+</html>

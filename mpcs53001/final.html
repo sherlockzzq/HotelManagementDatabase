@@ -1,0 +1,484 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Hotel Management System</title>
+<style>
+@charset "UTF-8";
+    .head3 {
+        font-family: sans-serif;
+    }
+    
+.container {
+  background-color: #FFFFFF;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom-width: 0px;
+  padding-left: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+}
+.row {
+  width: 100%;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  display: inline-block
+}
+.row.blockDisplay {
+  display: block;
+}
+.column_half {
+  width: 50%;
+  float: left;
+  margin-top: 0px;
+}
+.columns {
+  width: 25%;
+  float: left;
+  font-family: "Source Sans Pro";
+  color: #A5A5A5;
+  line-height: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: justify;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.row .columns p {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.container .columns h4 {
+  text-align: center;
+  color: #01B2D1;
+}
+.primary_header {
+  width: 100%;
+  background-color: #52bad5;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  clear: left;
+  border-bottom: 2px solid #2C9AB7;
+}
+.secondary_header {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #B3B3B3;
+  clear: left;
+}
+.container .secondary_header ul {
+  margin-top: 0%;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 15px;
+  padding-left: 0px;
+  width: 100%;
+}
+.secondary_header ul li {
+  list-style: none;
+  float: left;
+  margin-right: auto;
+  margin-top: 0px;
+  font-family: "Source Sans Pro";
+  font-weight: normal;
+  font-size: 20px;
+  color: #FFFFFF;
+  letter-spacing: 1px;
+  margin-left: auto;
+  text-align: center;
+  width: 16%;
+  transition: all 0.3s linear;
+}
+.secondary_header ul li:hover {
+  color: #717070;
+  cursor: pointer;
+}
+.left_article {
+  background-color: #FFFFFF;
+  width: 60%;
+  float: left;
+  font-family: fantasy;
+  color: #343434;
+  padding-bottom: 15px;
+}
+.noDisplay {
+  display: none;
+}
+.container .left_article h3 {
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-top: 5%;
+  color: #717070;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.container .left_article p {
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: justify;
+  line-height: 24px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #B3B3B3;
+}
+.right_article {
+  width: 40%;
+  float: left;
+  background-color: #F6F6F6;
+}
+.container .right_article ul {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+}
+.right_article ul li {
+  font-family: "Source Sans Pro";
+  list-style: none;
+  text-align: center;
+  background-color: #B3B3B3;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: #FFFFFF;
+  font-weight: bold;
+  border-radius: 0px;
+  transition: all 0.3s linear;
+  border-left: 5px solid #717070;
+}
+.right_article ul li:hover {
+  background-color: #717070;
+  cursor: pointer;
+}
+.footer {
+  background-color: #717070;
+}
+.title {
+  font-weight: bold;
+  font-style: normal;
+  font-family: "Source Sans Pro";
+  text-align: center;
+  color: #FFFFFF;
+  letter-spacing: 2px;
+}
+.placeholder {
+  /* [disabled]max-width: 400px;
+*/
+  /* [disabled]max-height: 200px;
+*/
+  width: 100%;
+  padding-top: 30px;
+  /* [disabled]padding-left: 19px;
+*/
+  padding-bottom: 30px;
+  height: 100%;
+}
+.left_half {
+  background-color: #52BAD5;
+}
+.container .column_half.left_half h2 {
+  color: #FFFFFF;
+  font-family: "Source Sans Pro";
+  text-align: center;
+}
+.right_half {
+  background-color: #01B2D1;
+  color: #FFFFFF;
+  font-family: "Source Sans Pro";
+  text-align: center;
+  font-weight: bold;
+}
+.column_title {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.copyright {
+  text-align: center;
+  background-color: #717070;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  border-top-width: 2px;
+  font-family: "Source Sans Pro";
+}
+body {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+
+@media (max-width: 320px) {
+.secondary_header ul li {
+  float: none;
+  margin-top: 28px;
+  margin-left: 0px;
+  width: 100%;
+}
+.container .secondary_header ul {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  height: auto;
+  width: 100%;
+  text-align: center;
+}
+.secondary_header {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding-top: 1px;
+  padding-bottom: 40px;
+}
+.left_article {
+  width: 100%;
+  height: auto;
+}
+.right_article {
+  width: 100%;
+  height: auto;
+}
+.placeholder {
+  width: 100%;
+  margin-top: 22PX;
+  margin-right: 0px;
+  margin-bottom: 22PX;
+  margin-left: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  max-width: 400px;
+  max-height: 200px;
+  height: auto;
+}
+.columns {
+  width: 100%;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding-top: 0PX;
+  padding-right: 0PX;
+  padding-bottom: 0PX;
+  padding-left: 0PX;
+}
+.columns p {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.column_half.left_half {
+  width: 100%;
+}
+.column_half.right_half {
+  width: 100%;
+}
+.copyright {
+  padding-top: 25px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+.container .left_article h3 {
+  margin-top: 30px;
+}
+.social .social_icon img {
+  width: 100%;
+}
+.container .secondary_header {
+}
+}
+
+.thumbnail {
+  width: 170px;
+  border-radius: 200px;
+  height: 100px;
+  margin-left: auto;
+}
+.thumbnail_align {
+  text-align: center;
+}
+.social {
+  text-align: center;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  width: 100%;
+  background-color: #414141;
+  clear: both;
+  overflow: auto;
+}
+.social_icon {
+  width: 25%;
+  text-align: center;
+  float: left;
+  transition: all 0.3s linear;
+  line-height: 0px;
+  padding-top: 7px;
+}
+.container .social .social_icon:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+#menu {
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="primary_header">
+      <h1 class="title"> Welcome to Our Hotel Management System</h1>
+    </div>
+    <nav class="secondary_header" id="menu">
+      <ul>
+        <li><a href = "#about" style = "text-decoration: none; color: inherit;">About</a></li>
+        <li><a href = "hotel.html" style = "text-decoration: none; color: inherit;">Hotel</a></li>
+        <li><a href = "#search" style = "text-decoration: none; color: inherit;">Search Info</a></li>
+        <li><a href = "customer.html" style = "text-decoration: none; color: inherit;">Clients</a></li>
+        <li><a href = "employee.html" style = "text-decoration: none; color: inherit;">Employee</a></li>
+        <li><a href = "#contact" style = "text-decoration: none; color:inherit;">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section>
+    <h2 class="noDisplay">Main Content</h2>
+    <article class="left_article">
+      <h3 class = "head3"><a name = "about">About Our Management System<a></h3>
+      <p>Our hotel management system is aimed to provide you better service for checking hotel and customer information. Users can check information on hotel, customer record, room reservation and employee.</p>
+      <p>The employee standard information includes his name, gender, birthday, ID number, and their duty to provide services to customer. The customers' records stored in the database contain their indentity, address, check in time and check out time, etc. By room catagory, each room has different design, prices and facility status. Also order status like reservation are also included.</p>
+      <p>To operate our hotel management database, you should try Hotel, Client, Employee parts. Search Info will lead you to project8.</p>
+    
+    </article><aside class="right_article"><img src=https://imagesvc.timeincapp.com/v3/mm/image?url=http%3A%2F%2Fcdn-image.travelandleisure.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2F1600x1000%2Fpublic%2F1494018877%2F1-nihiwatu-WBTOPHOTELS0505_0.jpg%3Fitok%3D-2Pb8ayG&w=1600&q=70" alt = "" align = "right" class = "placeholder" alt="" width="400" height="200" class="placeholder"/> </aside>
+        
+        
+  </section>
+      
+  <div class="row">
+    <div class="columns" style = "text-align: center">
+      <h4><a name = "search"> Check Hotel </a></h4>
+      <p> Type in the name of a hotel (like Renaissance Chicago Downtown Hotel, Hilton Chicago) and you will get its address and contact number you want.</p>
+        <form method="get" action = "gethotel.php">
+        Hotel Name: <input type = "text" name = "name"><br>
+            <input type = "submit" name = "Submit">
+        </form>
+    </div>
+    <div class="columns" style = "text-align: center">
+      
+      <h4>Check Price</h4>
+      <form method = "get" action = "getprice.php">
+      <p>Type in the hotel name (like Sheraton Grand Chicago, Renaissance Chicago Downtown Hotel) and datetime (2017-09-22, 2017-09-23) you will get the available room's price. </p>
+      Hotel Name: <input type="text" name = "name" ><br>
+       Date Time: <input type="date" name = "time" ><br>
+      <input type = "submit" name = "Submit">
+      </form>
+    </div>
+    <div class="columns" style = "text-align: center">
+      
+      <h4 >Check Reservation</h4>
+      <p>Type in the SSN (like 001-60-2177 461-15-7925 249-63-4270) to check reservation status.</p>
+        <form method="get" action = "checkreservation.php">
+            SSN: <input type = "text" name = "SSN"><br>
+            <input type = "submit" name = "Submit">
+        </form>
+    </div>
+    <div class="columns" style = "text-align: center">
+      
+      <h4>Check Employee</h4>
+      <p>Type in the Employee ID(like 242616153 357320366 265323474) and you will get all the information of this employee.</p>
+        <form method = "get" action = "checkemployee.php">
+            EmployeeID: <input type="text" name = "ID"><br>
+            <input type = "submit" name = "Submit">
+        </form>
+    </div>
+  </div>
+  <div class = "row">
+    <div class = "columns" style = "text-align: center;">
+      <h4>Get Employee Average Salary</h4>
+      <p>Find the average salary of a hotel (like Renaissance Chicago Downtown Hotel, Hilton Chicago)</p>
+      <form method="get" action="average.php">
+        Hotel Name: <input type="text" name="name"><br>
+        <input type="submit" name="Submit">
+      </form>
+    </div>
+    <div class = "columns" style = "text-align: center;">
+      <h4>Get Price Higher Than Target</h4>
+      <p>Type in the target price(From 0 to 400, for example) and you can get all the rooms whose price is higher than the target.</p>
+      <form method="get" action="target.php">
+        Target Price: <input type="text" name="target"><br>
+        <input type="submit" name="Submit">
+      </form>
+    </div>
+    <div class = "columns" style = "text-align: center;">
+      <h4>Fizzy Query For Hotel</h4>
+      <p>List all the possible result for your search (You may type in a, s, Chicago and so on).</p>
+      <form method="get" action="fizzy.php">
+        Fizzy Query: <input type="text" name="name"><br>
+        <input type="submit" name="Submit">
+      </form>
+    </div>
+    <div class = "columns" style = "text-align: center;">
+      <h4>Department Salary Status</h4>
+      <p>Type in a number and you will get the department whose average salary larger than this number. You can try 0, 5000, 6000, 8000 and so on.</p>
+      <form method="get" action="highersalary.php">
+        Salary: <input type="text" name="num"><br>
+        <input type="submit" name="Submit">
+      </form>
+    </div>
+  </div>
+  <div class="row blockDisplay">
+      
+    <div class="column_half left_half">
+      <h2 class="column_title"><a name = "contact">Our Customer</a></h2>
+        <b><p style = "text-align: center; color: white">Click <a href = "getcustomer.php" style = "color: aqua;">here</a> to get all the customer in our database.</p></b>
+    </div>
+    <div class="column_half right_half">
+      <h2 class="column_title">Our Partner</h2>
+        <p style = "text-align: center; color: white">Click <a href = "findhotel.php" style = "color: aqua">here</a> to get all the hotel in our database.</p>
+    </div>
+  </div>
+  <div class="social">
+    <p class="social_icon"><img src="https://www.shms.com/media/image/0/2016_medium_16_9/bachelor-of-arts-in-international-hospitality-events-management.jpg" width="100" alt="" class="thumbnail"/></p>
+    <p class="social_icon"><img src="http://wordsofvikram.com/wp-content/uploads/2014/11/front-desk.jpg" width="100" alt="" class="thumbnail"/></p>
+    <p class="social_icon"><img src="http://m.wsj.net/video/20170125/012517lunchmidseat1/012517lunchmidseat1_1280x720.jpg" width="100" alt="" class="thumbnail"/></p>
+    <p class="social_icon"><img src="http://hotelcleaningservices.com/wp-content/uploads/2012/07/Resort-Hotel-Cleaning.jpg" width="100" alt="" class="thumbnail"/></p>
+  </div>
+  <footer class="secondary_header footer">
+    <div class="copyright">&copy;2017 - <strong>MPCS. University of Chicago</strong></div>
+  </footer>
+</div>
+</body>
+</html>
+    
+    

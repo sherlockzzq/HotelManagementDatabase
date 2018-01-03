@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>customer</title>
+  
+</head>
+<body>
+<div>
+      <p>Sign up as VIP customer
+      <form method = "get" action = "addCustomer.php">
+      <p>Type in the following information to sign up for our vip guests.</p>
+      SSN(should be "XXX-XX-XXXX"): <input type="text" name = "SSN" ><br>
+      Name: <input type="text" name = "name" ><br>
+      Phone Number:<input type="text" name =  "num"><br>
+      Address: <input type="text" name =  "address"><br>
+      Birthday(1999-01-01): <input type="date" name =  "birthday"><br>
+      <input type = "submit" name = "Submit">
+    </form>
+    </div>
+<hr>
+<div>
+      <p>Update your information
+      <form method = "get" action = "updatereservation.php">
+      <p>Type in the following information to update your reservation information.</p>
+     
+      SSN(eg: 111-11-1112): <input type="text" name = "SSN" ><br>
+      Change to: <br>
+      Phone Number:<input type="text" name =  "phone" required/><br>
+      Address: <input type="text" name = "address" required/><br>
+      
+      Birthday:<input type="date" name =  "birthday" required/><br>
+      <input type = "submit" name = "Submit"></form>
+    </div><hr>
+        <div>
+      <p>Unscribe Your VIP
+      <form method = "get" action = "deleteCustomer.php">
+      <p>Type in your ssn to cancel your subscribition.</p>
+     
+      SSN: <input type="text" name = "SSN" ><br>
+      <input type = "submit" name = "Submit">
+      <p style = "text-align: center; color: white">Click <a href = "getcustomer.php" style = "color: aqua;">here</a> to get all the customer in our database.</p>
+    </form>
+    </div>
+
+</body>
+</html>
+
+
